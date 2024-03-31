@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="style_contact.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo"></h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                  <li><a href="http://127.0.0.1:5500/html/index.html" >HOME</a></li>
+                  <li><a href=http://127.0.0.1:5500/html/courses1.html >COURSES</a></li>
+                  <li><a href="http://127.0.0.1:5500/html/notes.html" >NOTES</a></li>
+                  <li><a href="http://127.0.0.1:5500/html/quizes.html" >QUIZES</a></li>
+                  <li><a href="http://127.0.0.1:5500/html/contact.html">CONTACT</a></li>
+                </ul>
+              </div>
+           </div>
+           <div class="quiz-container">
+            <h1><B><U>QUIZ 1</U></B></h1>
+            <BR>
+              <BR>
+            <div class="question"><B>1. What is the full form of HTML?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</B></div>
+            <div class="options">
+              <label><input type="radio" name="q1" value="Hyper Text Markup Language"> Hyper Text Markup Language</label>
+              <label><input type="radio" name="q1" value="High-level Text Management Language"> High-level Text Management Language</label>
+              <label><input type="radio" name="q1" value="Hyperlink and Text Markup Language">Hyperlink and Text Markup Language</label>
+              <label><input type="radio" name="q1" value=" High-level Text Modeling Language">  High-level Text Modeling Language</label>
+            </div>
+             <br>
+            <div class="question"><B>2. Which attribute is used to define the character encoding for an HTML document?</B></div>
+            <div class="options">
+              <label><input type="radio" name="q2" value="charset"> charset</label>
+              <label><input type="radio" name="q2" value="encoding"> encoding</label>
+              <label><input type="radio" name="q2" value="codepage"> codepage</label>
+              <label><input type="radio" name="q2" value=" character-set"> character-set </label>
+            </div>
+             <br>
+            <div class="question"><B>3. What is the purpose of the HTML 'nav' element?&nbsp;&nbsp;&nbsp;&nbsp;</B></div>
+            <div class="options">
+              <label><input type="radio" name="q3" value="It represents navigation links in the document."> It represents navigation links in the document.</label>
+              <label><input type="radio" name="q3" value="It defines the main content of the document.">It defines the main content of the document.</label>
+              <label><input type="radio" name="q3" value="It contains metadata about the document."> It contains metadata about the document.</label>
+              <label><input type="radio" name="q3" value="It represents a navigation bar.">It represents a navigation bar.
+
+              </label>
+            </div>
+           <br>
+            <button id="submit-btn" onclick="calculateScore()">Submit</button>
+          
+            <div id="result"></div>
+          </div>
+          
+          <script>
+            function calculateScore() {
+              var score = 0;
+          
+              // Question 1
+              var q1Answer = document.querySelector('input[name="q1"]:checked');
+              if (q1Answer && q1Answer.value === "Hyper Text Markup Language") {
+                score++;
+              }
+          
+              // Question 2
+              var q2Answer = document.querySelector('input[name="q2"]:checked');
+              if (q2Answer && q2Answer.value === "charset") {
+                score++;
+              }
+
+              // Question 3
+              var q3Answer = document.querySelector('input[name="q3"]:checked');
+              if (q3Answer && q3Answer.value === "It represents navigation links in the document.") {
+                score++;
+              }
+          
+              // Display result
+              document.getElementById("result").innerText = "Your score: " + score + "/3";
+            }
+          </script>
+          
+          </body>
+          </html>
+          

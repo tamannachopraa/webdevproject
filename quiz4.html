@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="style_contact.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo"></h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                  <li><a href="http://127.0.0.1:5500/html/index.html" >HOME</a></li>
+                  <li><a href=http://127.0.0.1:5500/html/courses1.html >COURSES</a></li>
+                  <li><a href="http://127.0.0.1:5500/html/notes.html" >NOTES</a></li>
+                  <li><a href="http://127.0.0.1:5500/html/quizes.html" >QUIZES</a></li>
+                  <li><a href="http://127.0.0.1:5500/html/contact.html">CONTACT</a></li>
+                </ul>
+              </div>
+           </div>
+           <div class="quiz-container">
+            <h1><B><U>QUIZ 4</U></B></h1>
+            <BR>
+              <BR>
+            <div class="question"><B>1.Which keyword is used to declare a function in JavaScript?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;</B></div>
+            <div class="options">
+              <label><input type="radio" name="q1" value="function">function</label>
+              <label><input type="radio" name="q1" value="func">func</label>
+              <label><input type="radio" name="q1" value="method">method</label>
+              <label><input type="radio" name="q1" value="def">def</label>
+            </div>
+             <br>
+            <div class="question"><B>2. How do you comment a single line in JavaScript?</B></div>
+            <div class="options">
+              <label><input type="radio" name="q2" value="// This is a comment">// This is a comment</label>
+              <label><input type="radio" name="q2" value=" /* This is a comment */"> /* This is a comment */</label>
+              <label><input type="radio" name="q2" value="# This is a comment"># This is a comment</label>
+              <label><input type="radio" name="q2" value="' This is a comment '">' This is a comment '</label>
+            </div>
+             <br>
+            <div class="question"><B>3.Which method is used to remove the last element from an array in JavaScript?&nbsp;&nbsp;&nbsp;&nbsp;</B></div>
+            <div class="options">
+              <label><input type="radio" name="q3" value="pop()">pop()</label>
+              <label><input type="radio" name="q3" value="removeLast()">removeLast()</label>
+              <label><input type="radio" name="q3" value="deleteLast()">deleteLast()</label>
+              <label><input type="radio" name="q3" value="slice(-1)">slice(-1)
+
+              </label>
+            </div>
+           <br>
+            <button id="submit-btn" onclick="calculateScore()">Submit</button>
+          
+            <div id="result"></div>
+          </div>
+          
+          <script>
+            function calculateScore() {
+              var score = 0;
+          
+              // Question 1
+              var q1Answer = document.querySelector('input[name="q1"]:checked');
+              if (q1Answer && q1Answer.value === "function") {
+                score++;
+              }
+          
+              // Question 2
+              var q2Answer = document.querySelector('input[name="q2"]:checked');
+              if (q2Answer && q2Answer.value === "// This is a comment") {
+                score++;
+              }
+
+              // Question 3
+              var q3Answer = document.querySelector('input[name="q3"]:checked');
+              if (q3Answer && q3Answer.value === "pop()") {
+                score++;
+              }
+          
+              // Display result
+              document.getElementById("result").innerText = "Your score: " + score + "/3";
+            }
+          </script>
+          
+          </body>
+          </html>
